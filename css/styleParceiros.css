@@ -1,74 +1,74 @@
 * {
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 
 .header {
- 
-    background-color:rgb(255, 255, 255);
-    width:100%;
+
+    background-color: rgb(255, 255, 255);
+    width: 100%;
     height: 80px;
 }
 
 
 .body {
-    display:flexbox;
-    place-items:center;
+    display: flexbox;
+    place-items: center;
     height: 100vh;
     background-color: rgb(255, 255, 255);
-    border:solid 5px rgb(255, 252, 252);
-    width:100%;
+    border: solid 5px rgb(255, 252, 252);
+    width: 100%;
     height: 100%;
-    
+
 }
 
 
 .conteudo {
-    border:10px solid rgb(255, 255, 255);
+    border: 10px solid rgb(255, 255, 255);
     height: 100%;
-    width:100% ;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     margin-right: 10%;
-    
+
 }
 
 .textotitulo {
     text-align: center;
-    color:rgb(255, 102, 0);
+    color: rgb(255, 102, 0);
     font-family: Arial, Helvetica, sans-serif;
-            
+
 }
 
 
-.img{
+.img {
     width: 100%;
     height: 80%;
- 
+
 }
 
 .fotoetexto {
-    display:flex;
+    display: flex;
     border: solid 2px rgb(255, 255, 255);
-    width: 80%;   
+    width: 80%;
     height: 45%;
     padding: 1%;
     gap: 10px;
 }
 
 .imagem {
-   
-    width:100%;
-    height:100%;
+
+    width: 100%;
+    height: 100%;
     clip-path: circle(90%);
 }
 
-.img{
+.img {
     width: 80%;
     height: 80%;
     border-radius: 90%;
-    border:solid 3px rgb(255, 124, 1);
-    
+    border: solid 3px rgb(255, 124, 1);
+
 }
 
 .tituloparceiros {
@@ -78,68 +78,62 @@
 
 
 .texto {
-   
-    word-spacing:10px;
-    color:rgb(9, 75, 255);
+
+    word-spacing: 10px;
+    color: rgb(9, 75, 255);
     font-family: Arial, Helvetica, sans-serif;
-    border:solid 2px rgb(255, 255, 255);
+    border: solid 2px rgb(255, 255, 255);
     border-radius: 5%;
-    display:inline-flex;
+    display: inline-flex;
     vertical-align: middle;
     text-align: center;
     padding-top: 2%;
     height: 60%;
 }
 
-   
+
 
 
 .bottongap {
-   
+
     margin-left: 35%;
-    
+
 }
 
 .botton1 {
 
     margin-bottom: 20%;
-    height:30%;
+    height: 30%;
 }
 
 .aside {
-    border:solid 0px;
+    border: solid 0px;
     background-color: #F18904;
-    width: 15%;   
+    width: 15%;
     height: 200%;
     position: absolute;
-    top:40px;
+    top: 40px;
     right: 0;
-    text-align:left;
-    margin-right: 0,9%;
-    
-    
-    
+    text-align: left;
+    margin-right: 0, 9%;
+
+
+
 }
 
 .bottonaside {
-    
- padding-top: 100%;
- margin-bottom:10%;
- 
 
-   
+    padding-top: 100%;
+    margin-bottom: 10%;
+
+
+
 }
 
 
 
 .footer {
-    position:fixed;
+    position: fixed;
     position: bottom;
 
 }
-
-
-
-
-
-
