@@ -11,18 +11,20 @@ html, body{
 
 }
 
+.clear{clear: both;}
+
 div.sidebar{
-    width: 20%;
     height: 100%;
-    padding-top: 3.8%;      /*56px*/
+    padding-top: 56px;      /*56px*/
     background-color: #2D3035;
-    max-width: 300px;
+    width: 300px;
+    float: left;
 }
 
 div.topo{
     background-color: #26282D;
     text-align: center;
-    padding: 20px 10px;
+    padding: 10px 10px;
 }
 
 div.topo h3{
@@ -56,16 +58,51 @@ div.menu li:hover a{
     color: white;
 }
 
+/*FIM DA SIDEBAR*/
 
+div.main-content{
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+}
 
+header{
+    background: white;
+    padding-top: 84px;
+    border-bottom: 2px solid #CCCCCC;
+}
 
+.campo-pesquisa {
+    float: right;
+}
 
+.icone-pesquisa{
+    background: #D6D6D6;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
 
+.icone-pesquisa i{position: relative; top: 5px;}
 
+.campo-pesquisa form{
+    vertical-align: middle;
+    display: inline-block;
+}
 
-
-
-
+.campo-pesquisa input[type=text]{
+    width: 200px;
+    height: 30px;
+    border-left: 0;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    padding-left: 10px;
+    font-size: 16px;
+}
 
 
 
