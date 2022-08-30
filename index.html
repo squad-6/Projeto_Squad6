@@ -2,18 +2,24 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Home</title>
-
+  <!--links da fontes "roboto"-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
   <!-- Links Uso Bootstrap, CSS e Font -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <link rel="stylesheet" href="icon/font-awesome.min.css">
-  <link rel="stylesheet" href="styleHome.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="./icon/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/styleHome.css">
 </head>
 
 <body>
-  <nav style="background-color: #0AA7C8;" class="navbar navbar-expand-md navbar-dark fixed-top">
+  <nav style="background-color: #053894;" class="navbar navbar-expand-md navbar-dark fixed-top">
     <!--Inicio NavBar-->
     <div class="container">
       <a class="navbar-brand" href="index.html">AcessoEscola</a>
@@ -66,8 +72,7 @@
                   <label>Email address</label>
                   <input type="email" class="form-control" placeholder="Enter email">
                 </div>
-                <button style="background: #F49F05;border:0;width:200px;" type="submit"
-                  class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
               </form>
             </div>
           </div>
@@ -85,7 +90,7 @@
     </section>
     <!--Fim Segunda Seção Chamada-->
 
-    <section style="background: rgb(225,225,225);" class="sobre">
+    <section class="sobre">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -100,7 +105,7 @@
               Phasellus malesuada erat et erat eleifend, id faucibus sem ultrices. Proin dignissim nibh lorem, nec
               consectetur velit euismod non. Integer co...</p>
             <!--Botão com Modal-->
-            <div class="text-center"><button style="background: #F49F05;" type="button" class="btn btn-info"
+            <div class="text-center"><button style="background: #0487D9;" type="button" class="btn btn-info"
                 data-toggle="modal" data-target="#myModal">Saiba mais!</button></div>
 
           </div>
@@ -186,13 +191,14 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center">
-            <h2><i class="fa fa-bell-o" aria-hidden="true"></i> Participe da nossa lista!</h2>
+            <h2><i class="fa fa-bell-o" aria-hidden="true"></i>Receba nossas novidades!</h2>
           </div>
           <!--col-->
           <div class="col-md-6 text-center">
             <form>
               <div class="form-group">
-                <input type="email"><button type="submit" class="btn btn-default">Entrar!</button>
+                <input type="email" placeholder="Informe o seu email"><button type="submit"
+                  class="btn btn-default">Entrar!</button>
               </div>
             </form>
           </div>
@@ -227,7 +233,7 @@
                 <label>Sua mensagem:</label>
                 <textarea class="form-control"></textarea>
               </div>
-              <button style="background:#3FA3C5;color: white;" type="submit" class="btn btn-default">Enviar</button>
+              <button style="background:#0487D9;color: white;" type="submit" class="btn btn-default">Enviar</button>
             </form>
 
           </div>
@@ -268,7 +274,7 @@
     </footer>
     <!--Fim Footer 1-->
 
-    <footer style="background:#444;padding:8px 0;" class="text-center">
+    <footer id="footer-fim" class="text-center">
       <!--Footer 2-->
       <p style="margin: 0;">©Todos os direitos reservados</p>
     </footer>
