@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "roboto", sans-serif;
 }
 
 body{
@@ -18,8 +17,10 @@ body{
     width: 80%;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
 
-
+.title h1{
+    font-family: "anton", sans-serif;
 }
 
 .form-image {
@@ -29,7 +30,6 @@ body{
     align-items: center;
     background-color: #fde3a7d7;
     padding: 1rem;
-
 }
 
 .form-image img {
@@ -44,7 +44,6 @@ body{
     flex-direction: column;
     background-color: #fff;
     padding: 3rem;
-
 }
 
 .form-header {
@@ -56,7 +55,6 @@ body{
 .login-button {
     display: flex;
     align-items: center;
-
 }
 
 .login-button button {
@@ -86,7 +84,6 @@ body{
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
-
 }
 
 .input-group{
@@ -94,6 +91,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 0;
+    font-family: 'Ibarra Real Nova', serif;
 }
 
 .input-box {
@@ -139,6 +137,7 @@ body{
 .gender-input {
     display: flex;
     align-items: center;
+    font-family: 'Ibarra Real Nova', serif;
 }
 
 .gender-input input {
@@ -167,9 +166,11 @@ body{
 
 .continue-button button a {
     text-decoration: none;
-    font-size: 0.93rem;
+    font-size:20px;
     font-weight: 500;
     color: #fff;
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 500;
 }
 
 @media screen and (max-widh: 1330px) {
