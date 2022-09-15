@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.navbar {
+    background-color: #053894;
+  }
+  
+  .nav-link {
+    margin: 0 15px;
+  }
+
 body{
     width: 100%;
     height: 100vh;

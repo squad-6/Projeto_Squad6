@@ -5,6 +5,14 @@
 
 }
 
+.navbar {
+    background-color: #053894;
+  }
+  
+  .nav-link {
+    margin: 0 15px;
+  }
+
 .title {
     text-align: end;
     padding-top: 4vw;

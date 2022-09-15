@@ -5,6 +5,14 @@
     font-family: 'Roboto';
 }
 
+.navbar {
+    background-color: #053894;
+  }
+  
+  .nav-link {
+    margin: 0 15px;
+  }
+
 html, body{
     height: 100%;
     background: #FAF9FC;

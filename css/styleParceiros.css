@@ -3,6 +3,13 @@
     padding: 0px;
 }
 
+.navbar {
+    background-color: #053894;
+  }
+  
+  .nav-link {
+    margin: 0 15px;
+  }
 
 .header {
 

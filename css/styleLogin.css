@@ -2,6 +2,14 @@ body {
   margin: 0;
 }
 
+.navbar {
+  background-color: #053894;
+}
+
+.nav-link {
+  margin: 0 15px;
+}
+
 body * {
   box-sizing: border-box;
 }
