@@ -83,7 +83,10 @@ section.chamada h2 {
 section.sobre {
   padding: 30px 0;
   background: #ffffff;
+}
 
+section.sobre .col-md-12 p {
+  font-size: 20px;
 }
 
 .custom-title {
@@ -113,12 +116,16 @@ section.diferenciais {
 
 section.diferenciais .col-md-6 {
   padding: 0 40px;
-  color: white;
 }
 
 section.diferenciais h2 {
   padding: 10px;
   border-bottom: 1px dotted black;
+}
+
+section.diferenciais .col-md-6 p {
+  color: white;
+  font-size: 20px;
 }
 
 section.convite {
@@ -129,7 +136,7 @@ section.convite {
 section.convite h2 {
   font-size: 28px;
   margin: 15px 0;
-  color: white;
+  color: black;
 }
 
 section.convite form {
@@ -181,6 +188,10 @@ footer a {
 
 #footer-fim {
   background: #053894;
+}
+
+.title-footer{
+  color: black;
 }
 
 
