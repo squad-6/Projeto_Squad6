@@ -111,8 +111,9 @@ section.diferenciais {
   background-image: url(../images/bg2.png);
 }
 
-section.diferenciais .col-md-4 {
+section.diferenciais .col-md-6 {
   padding: 0 40px;
+  color: white;
 }
 
 section.diferenciais h2 {
