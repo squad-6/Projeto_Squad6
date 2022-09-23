@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-
 }
 
 .navbar {
@@ -22,10 +21,8 @@
 .btn-primary {
   background: #0487D9;
   border: none;
-
 }
 
-/* mudança*/
 .section.bg-top {
   width: 100%;
   min-height: 500px;
@@ -36,14 +33,11 @@
 }
 
 .header {
-
-
   width: 100%;
   height: 80px;
 }
 
 .textotitulo {
-
   text-align: center;
   font-family: "anton", sans-serif;
   color: black;
@@ -53,29 +47,22 @@
 
 .body {
   background: #5c1883dc;
-
-
 }
 
 #paragrafo1 {
   color: black;
   text-align: center;
-
 }
 
 .paragrafo {
-
   color: #000000;
   text-align: center;
-
 }
 
 .conteudo {
-
   margin-left: 10px;
   display: flex;
   justify-content: space-between;
-
 }
 
 .btn btn-primary {
@@ -86,7 +73,6 @@
 .flex {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .flex>div {
@@ -110,18 +96,15 @@
   font-family: 'Ibarra Real Nova', serifa;
 }
 
-
 .aside {
   border: solid 0px;
   background-color: #F2B705;
   text-align: left;
-
 }
 
 .citacao {
   text-align: center;
   font-style: italic;
-
 }
 
 footer {

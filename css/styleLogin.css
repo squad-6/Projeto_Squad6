@@ -36,7 +36,6 @@ body * {
   font-family: "anton", sans-serif;
   font-size: 3vw;
   color: #F24A13;
-
 }
 
 .login-imagem {
@@ -62,7 +61,6 @@ body * {
   background: #053894;
   border-radius: 20px;
   box-shadow: 0px 10px 40px #00000056;
-
 }
 
 .card-login>h1 {
@@ -83,7 +81,6 @@ body * {
   align-items: flex-start;
   justify-content: center;
   margin: 10px 0px;
-
 }
 
 .textfield>input {
@@ -102,7 +99,6 @@ body * {
 .textfield>label {
   color: #d3cef4;
   margin-bottom: 10px;
-
 }
 
 .textfield>input::placeholder {
@@ -122,7 +118,6 @@ body * {
   color: #0b1423;
   background: #9434cb;
   cursor: pointer;
-
 }
 
 .btn-login:hover {
