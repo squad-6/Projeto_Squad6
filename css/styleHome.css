@@ -78,13 +78,27 @@ section.chamada h2 {
   font-size: 34px;
 }
 
-section.sobre {
+.sub-title{
+  text-align: center;
+}
+
+section.sobre-cima {
   padding: 30px 0;
   background: #ffffff;
 }
 
-section.sobre .col-md-12 p {
+section.sobre-cima .col-md-12 p {
   font-size: 20px;
+}
+
+section.sobre-baixo {
+  padding: 30px 0;
+  background: #6f42c1;
+}
+
+section.sobre-baixo .col-md-12 p {
+  font-size: 20px;
+  color: white;
 }
 
 .custom-title {
