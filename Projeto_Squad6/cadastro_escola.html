@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styleCadastroEscola.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <!--Inicio NavBar-->
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AcessoEscola</a>
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Início<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="parceiros.html">Parceiros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quemSomos.html">Quem Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Entrar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Fim NavBar-->
+
+  <div class="container">
+    <div class="form-image">
+      <img src="./svg/High School-cuate.svg" alt="imagem fundo">
+    </div>
+    <div class="form">
+      <form action="#">
+        <div class="form-header">
+          <div class="title">
+            <h1>Cadastre sua escola</h1>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-box">
+            <label for="firstname">Nome da Escola</label>
+            <input id="firstname" type="text" name="firstname" placeholder="Digite o nome" required>
+          </div>
+
+          <div class="input-box">
+            <label for="lastname">Estado</label>
+            <input id="firstname" type="text" name="lasstname" placeholder="Digite seu estado" required>
+          </div>
+
+          <div class="input-box">
+            <label for="lastname">Cidade </label>
+            <input id="firstname" type="text" name="lasstname" placeholder="Digite sua cidade" required>
+          </div>
+
+          <div class="input-box">
+            <label for="email">E-mail institucional </label>
+            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+          </div>
+
+          <div class="input-box">
+            <label for="password">Senha</label>
+            <input id="password" type="password" name="password" placeholder="Digite aqui" required>
+          </div>
+
+          <div class="input-box">
+            <label for="password">Telefone</label>
+            <input id="password" type="text" name="password" placeholder="(00) 00000-0000" maxlength="9" required>
+          </div>
+
+          <div class="input-box">
+            <label for="Confirmpassword">CEP</label>
+            <input id="Confirmpassword" type="text" name="Confirmpassword" placeholder="00000-000" required>
+          </div>
+
+          <div class="input-box">
+            <label for="Confirmpassword">Endereço</label>
+            <input id="Confirmpassword" type="text" name="Confirmpassword" placeholder="Ex.: Rua Y, nº XX" required>
+          </div>
+        </div>
+        
+        <div class="gender-inputs">
+          <div class="continue-button">
+            <button><a href="#">Registrar</a></button>
+          </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
