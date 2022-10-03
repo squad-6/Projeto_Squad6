@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 .navbar {
@@ -24,7 +25,7 @@
 .box-fix {
     position: relative;
     top: 55px;
-    background-image: url(../images/backgroud.png);
+    background: #5c1883dc;
 }
 
 .espaço {
@@ -63,6 +64,7 @@ main {
 
 .intro1 div img {
     width: 50vw;
+
 }
 
 .intro2 {
@@ -155,6 +157,7 @@ main {
     font-family: "anton", sans-serif;
     font-weight: 700;
     color: #400036;
+
 }
 
 .content-A2 {
@@ -172,6 +175,7 @@ main {
     width: 50vw;
     margin-bottom: 20px;
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+
 }
 
 .content-A2 div p {
@@ -245,6 +249,7 @@ main {
     padding-top: 2vw;
 }
 
+
 .content-C div h2 {
     font-size: 10vw;
     text-align: center;
@@ -274,6 +279,13 @@ main {
     font-size: 3.5vmin;
 }
 
-footer {
-    font-family: "anton", sans-serif;
+
+
+#footer-fim {
+    background: #053894;
+    color: white;
+    height: 53px;
+    text-align: center;
+    padding: 14px 0;
+    background-size: 100%;
 }
