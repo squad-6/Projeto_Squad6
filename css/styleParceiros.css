@@ -45,7 +45,7 @@
 }
 
 #paragrafo1 {
-  color: black;
+  color: white;
   text-align: justify;
   font-family: 'Ibarra Real Nova', serif;
   font-weight: 550;
@@ -57,7 +57,7 @@
 }
 
 .body {
-  background: #5c1883dc;
+  background: #703592dc;
 }
 
 .conteudo {
@@ -166,7 +166,7 @@ section.chamada {
 
 .custom-title h2 {
   color: rgb(0, 0, 0);
-  font-weight: 650;
+  font-weight: 550;
   font-size: 40px;
 }
 

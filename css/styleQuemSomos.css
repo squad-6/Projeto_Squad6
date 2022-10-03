@@ -16,16 +16,16 @@
 .title {
     text-align: end;
     padding-top: 4vw;
-    border-bottom: 2px solid #F18904;
+    border-bottom: 2px solid #3FA3C5;
     width: 30%;
     font-family: "anton", sans-serif;
-    font-weight: 700;
+    font-weight: 550;
 }
 
 .box-fix {
     position: relative;
     top: 55px;
-    background: #5c1883dc;
+    background: #703592dc;
 }
 
 .espaço {
@@ -44,7 +44,7 @@ main {
     flex-wrap: wrap;
     align-items: center;
     padding-top: 1vw;
-    border-bottom: 4px dashed #F2B705;
+    border-bottom: 4px dashed #3FA3C5;
     padding-bottom: 2vw;
 }
 
@@ -253,10 +253,10 @@ main {
 .content-C div h2 {
     font-size: 10vw;
     text-align: center;
-    border-bottom: 4px dashed #F2B705;
-    color: #D42650;
+    border-bottom: 4px dashed #3FA3C5;
+    color: #F2B705;
     font-family: "anton", sans-serif;
-    font-weight: 700;
+    font-weight: 590;
 }
 
 .content-C div p {
@@ -272,7 +272,7 @@ main {
 }
 
 .content-C div:nth-child(3) {
-    border: dashed #F2B705;
+    border: dashed #3FA3C5;
     border-radius: 15px;
     padding: 1.5vw;
     text-align: justify;
