@@ -60,6 +60,10 @@ section.bg-top {
   padding: 140px 0;
 }
 
+.texto-bg p{
+  font-size: 18px;
+}
+
 /*.texto-bg h2{
   font-family: "anton", sans-serif;
 }*/
