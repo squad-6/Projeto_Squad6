@@ -14,11 +14,13 @@
 
 body {
     width: 100%;
-    height: 112vh;
+    height: 108vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0c0ce94d
+    background: #0c0ce94d;
+    
+
 }
 
 .container {
@@ -179,6 +181,10 @@ body {
     color: #fff;
     font-family: 'Ibarra Real Nova', serif;
     font-weight: 500;
+}
+
+input::placeholder {
+ color: #053894;
 }
 
 @media screen and (max-width: 1330px) {
