@@ -18,7 +18,7 @@
 		<div class="menu">
 			<ul>
 				<li><i class="fas fa-hand-holding-usd"></i><a href=""> Doar</a></li>
-				<li><i class="fas fa-angle-double-right"></i><a href=""> Home</a></li>
+				<li><i class="fas fa-clipboard-list"></i><a href=""> Questionário</a></li>
 				<li><i class="fas fa-angle-double-right"></i><a href=""> Home</a></li>
 				<li><i class="fas fa-angle-double-right"></i><a href=""> Home</a></li>
 			</ul>
@@ -102,6 +102,9 @@
 					Integer et suscipit nisl. Sed nec ligula erat.</p>
 			</div>
 			<!--panel-->
+			<div>
+				<canvas id="myChart"></canvas>
+			</div>
 		</div>
 		<!--content1-->
 
@@ -170,6 +173,42 @@
 
 		})
 	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+		const labels = [
+		  'January',
+		  'February',
+		  'March',
+		  'April',
+		  'May',
+		  'June',
+		];
+	  
+		const data = {
+		  labels: labels,
+		  datasets: [{
+			label: 'My First dataset',
+			backgroundColor: 'rgb(255, 99, 132)',
+			borderColor: 'rgb(255, 99, 132)',
+			data: [0, 10, 5, 2, 20, 30, 45],
+		  }]
+		};
+	  
+		const config = {
+		  type: 'line',
+		  data: data,
+		  options: {}
+		};
+	  </script>
+	  <script>
+		const myChart = new Chart(
+		  document.getElementById('myChart'),
+		  config
+		);
+	  </script>
+
+
 
 </body>
 
