@@ -126,42 +126,11 @@
 	</div>
 	<!--main-content-->
 
-
-
 	<div class="clear"></div>
 
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-	<script>
-		$(function () {
-			let windowWidth = $(window)[0].innerWidth;
-			if (windowWidth <= 768) {
-				$('.nome-usuario h2').click(function () {
-					let el = $('.sidebar');
-					if (el.is(':visible')) {
-						el.hide();
-						$('.main-content').css('left', '0');
-					} else {
-						el.show();
-						$('.main-content').css('left', '300px');
-					}
-				})
-			}
-
-			$(window).resize(function () {
-				windowWidth = $(window)[0].innerWidth;
-			})
-
-
-		})
-	</script>
-
-
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="./js/dashboard.js"></script>
-	
-
-
-
 </body>
 
 </html>
