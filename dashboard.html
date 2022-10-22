@@ -71,41 +71,22 @@
 			</div>
 			<!--panel-->
 			<div style="width: 49%;margin-right: 1%;" class="panel">
-				<h2>Bem-vindo, Rian!</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed purus libero. Nam iaculis felis sed
-					dignissim tincidunt. Sed eu odio enim. Morbi leo orci, ultricies eget pretium imperdiet, bibendum
-					sit amet dui. Aliquam sit amet consequat ligula. Nam accumsan quis nisl vel maximus. Quisque
-					malesuada mauris sit amet elit feugiat placerat. Vestibulum consequat vel diam a aliquam.
-					Pellentesque iaculis congue dui vitae hendrerit. Mauris consequat facilisis nisi non vulputate.
-					Integer et suscipit nisl. Sed nec ligula erat.</p>
+				<canvas id="myChart" width="400" height="400"></canvas>
 			</div>
 			<!--panel-->
 
 			<div style="width: 49%;margin-left: 1%;" class="panel">
-				<h2>Bem-vindo, Rian!</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed purus libero. Nam iaculis felis sed
-					dignissim tincidunt. Sed eu odio enim. Morbi leo orci, ultricies eget pretium imperdiet, bibendum
-					sit amet dui. Aliquam sit amet consequat ligula. Nam accumsan quis nisl vel maximus. Quisque
-					malesuada mauris sit amet elit feugiat placerat. Vestibulum consequat vel diam a aliquam.
-					Pellentesque iaculis congue dui vitae hendrerit. Mauris consequat facilisis nisi non vulputate.
-					Integer et suscipit nisl. Sed nec ligula erat.</p>
+				<canvas id="pyChart" width="400" height="400"></canvas>
 			</div>
 			<!--panel-->
 			<div class="clear"></div>
 			<div class="panel">
-				<h2>Bem-vindo, Rian!</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed purus libero. Nam iaculis felis sed
-					dignissim tincidunt. Sed eu odio enim. Morbi leo orci, ultricies eget pretium imperdiet, bibendum
-					sit amet dui. Aliquam sit amet consequat ligula. Nam accumsan quis nisl vel maximus. Quisque
-					malesuada mauris sit amet elit feugiat placerat. Vestibulum consequat vel diam a aliquam.
-					Pellentesque iaculis congue dui vitae hendrerit. Mauris consequat facilisis nisi non vulputate.
-					Integer et suscipit nisl. Sed nec ligula erat.</p>
+				<canvas id="byChart"></canvas>
 			</div>
 			<!--panel-->
-			<div>
-				<canvas id="myChart"></canvas>
-			</div>
+			
 		</div>
+		
 		<!--content1-->
 
 		<div class="ultimas-atividades">
@@ -174,39 +155,10 @@
 		})
 	</script>
 
+
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script>
-		const labels = [
-		  'January',
-		  'February',
-		  'March',
-		  'April',
-		  'May',
-		  'June',
-		];
-	  
-		const data = {
-		  labels: labels,
-		  datasets: [{
-			label: 'My First dataset',
-			backgroundColor: 'rgb(255, 99, 132)',
-			borderColor: 'rgb(255, 99, 132)',
-			data: [0, 10, 5, 2, 20, 30, 45],
-		  }]
-		};
-	  
-		const config = {
-		  type: 'line',
-		  data: data,
-		  options: {}
-		};
-	  </script>
-	  <script>
-		const myChart = new Chart(
-		  document.getElementById('myChart'),
-		  config
-		);
-	  </script>
+	<script src="./js/dashboard.js"></script>
+	
 
 
 
