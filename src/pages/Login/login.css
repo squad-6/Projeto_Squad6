@@ -1,0 +1,163 @@
+.tela-login {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #053894;
+}
+
+.nav-link {
+    margin: 0 15px;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: url(../../../images/bg2.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-esquerda {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-esquerda>h1 {
+    font-family: "anton", sans-serif;
+    font-size: 3vw;
+    color: #F24A13;
+}
+
+.login-imagem {
+    width: 30vw;
+}
+
+.login-direita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #053894;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login>h1 {
+    font-family: "anton", sans-serif;
+    color: #F24A13;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card-login>h6 {
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield>input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield>label {
+    color: #d3cef4;
+    margin-bottom: 10px;
+}
+
+.textfield>input::placeholder {
+    color: #2c2b36;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #0b1423;
+    background: #9434cb;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #c1ff9d;
+    opacity: 10px;
+}
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .login-esquerda>h1 {
+        display: none;
+    }
+
+    .login-esquerda {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-direita {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-imagem {
+        width: 50vw;
+    }
+
+    .card-login {
+        width: 80%;
+    }
+}
+
+.linha {
+    color: white;
+    border: solid 1px;
+    width: 160px;
+}
