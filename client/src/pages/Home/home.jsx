@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleDown, faIdCard, faUsers, faBell, faHome, faHandshake } from '@fortawesome/free-solid-svg-icons'
 
+
 export default function Home(){
     return (
         <div className='tela-home'>

@@ -19,7 +19,11 @@ export default function Cadastroescola(){
     email: yup.string().email("Não é um email").required("Este campo é obrigatório."),
     password: yup.string().min(8, "A senha deve ter no mínimo 8 caracteres").required("Este campo é obrigatório."),
     confirmPassword: yup.string().oneOf([yup.ref("password"), null], "As senhas devem ser iguais.")
-  })
+  });
+
+  function myFunction(){
+    
+  }
 
     return (
         <div className='tela-cadastroescola'>
@@ -116,7 +120,7 @@ export default function Cadastroescola(){
                   </div>
                   <div className="gender-inputs">
                   <div className="continue-button">
-                    <button className='button' type="submit"><a>Registrar</a></button>
+                    <button className='button' type="submit" onclick="myFunction()"><a>Registrar</a></button>
                   </div>
                 </div>
                 </div>

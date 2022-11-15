@@ -4,7 +4,6 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import Cadastroescola from './pages/Cadastroescola/cadastroescola'
 import Cadastroparceiros from './pages/Cadastroparceiros/cadastroparceiros'
-import Dashboard from './pages/Dashboard/dashboard'
 import Doacao from './pages/Doacao/doacao'
 import Home from './pages/Home/home'
 import Login from './pages/Login/login'
@@ -25,10 +24,6 @@ const router = createBrowserRouter([
     {
         path: '/cadastro-parceiros',
         element: <Cadastroparceiros/>
-    },
-    {
-        path: '/dashboard',
-        element: <Dashboard/>
     },
     {
         path: '/doacao',
