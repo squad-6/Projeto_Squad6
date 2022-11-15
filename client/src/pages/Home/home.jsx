@@ -3,9 +3,27 @@ import { Link } from 'react-router-dom'
 import Logo from '../../components/images/Acesso 10.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleDown, faIdCard, faUsers, faBell, faHome, faHandshake } from '@fortawesome/free-solid-svg-icons'
+import { Formik, Form, Field, ErrorMessage} from 'formik'
+import * as yup from 'yup'
+import Axios from 'axios'
 
 
 export default function Home(){
+  const handleClickMensagem = (values) => {
+    Axios.post("http://localhost:3001/mensagem", {
+      nome: values.nome,
+      email: values.email,
+      mensagem: values.mensagem,
+    }).then((response) => {
+      console.log(response);
+    });
+  /*const validationMensagem = yup.object().shape({
+    nome: yup.string().nome("Digite seu nome").required("Esse campo é obrigatório"),
+    email: yup.string().email("Não é um email").required("Este campo é obrigatório."),
+    Mensagem: yup.string().min(8, "A senha deve ter no mínimo 8 caracteres").required("Este campo é obrigatório."),
+  });*/
+    
+  };
     return (
         <div className='tela-home'>
           <meta charSet="utf-8" />
@@ -214,21 +232,26 @@ export default function Home(){
                       <div />
                       <h2>Fale conosco</h2>
                     </div>
-                    <form>
-                      <div className="form-group">
-                        <label>Nome:</label>
-                        <input type="text" className="form-control" />
-                      </div>
-                      <div className="form-group">
-                        <label>E-mail:</label>
-                        <input type="email" className="form-control" />
-                      </div>
-                      <div className="form-group">
-                        <label>Sua mensagem:</label>
-                        <textarea className="form-control" defaultValue={""} />
-                      </div>
-                      <button style={{background: '#0487D9', color: 'white'}} type="submit" className="btn btn-default">Enviar</button>
-                    </form>
+                    <Formik initialValues={{}} onSubmit={handleClickMensagem} /*validationSchema={validationMensagem}*/>
+                      <Form className='contato-form'>
+                        <div className="form-group">
+                          <label>Nome:</label>
+                          <Field name="nome" className="form-control"></Field>
+                          <ErrorMessage component="span" name="nome" className="form-error"/>
+                        </div>
+                        <div className="form-group">
+                          <label>E-mail:</label>
+                          <Field name="email" className="form-control"></Field>
+                          <ErrorMessage component="span" name="email" className="form-error"/>
+                        </div>
+                        <div className="form-group">
+                          <label>Sua mensagem:</label>
+                          <Field name="mensagem" className="form-control" as="textarea" defaultValue={""}></Field>
+                          <ErrorMessage component="span" name="mensagem" className="form-error"/>
+                        </div>
+                        <button style={{background: '#0487D9', color: 'white'}} type="submit" className="btn btn-default">Enviar</button>
+                      </Form>
+                    </Formik>
                   </div>
                 </div>
               </div>
