@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Menina from '../../components/images/raising-hand-animate_1.png'
 import { Formik, Form, Field, ErrorMessage} from 'formik'
 import * as yup from 'yup'
+import Axios from 'axios'
 
 export default function Login(){
   const handleClickLogin = (values) => console.log(values);

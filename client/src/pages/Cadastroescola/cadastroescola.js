@@ -3,9 +3,17 @@ import { Link } from 'react-router-dom'
 import School from '../../components/images/High-School-cuate.png'
 import { Formik, Form, Field, ErrorMessage} from 'formik'
 import * as yup from 'yup'
+import  Axios from 'axios'
 
 export default function Cadastroescola(){
-  const handleClickRegister = (values) => console.log(values);
+  const handleClickRegister = (values) => {
+    Axios.post("https://localhost:3001/resgister", {
+      email: values.email,
+      password: values.password
+    }).then((response) => {
+      console.log(response);
+    });
+  };
 
   const validationRegister = yup.object().shape({
     email: yup.string().email("Não é um email").required("Este campo é obrigatório."),
@@ -108,7 +116,7 @@ export default function Cadastroescola(){
                   </div>
                   <div className="gender-inputs">
                   <div className="continue-button">
-                    <button><a href="#">Registrar</a></button>
+                    <button className='button' type="submit"><a href="#">Registrar</a></button>
                   </div>
                 </div>
                 </div>
