@@ -1,5 +1,6 @@
 import './home.css'
 import { Link } from 'react-router-dom'
+import Logo from '../../components/images/Acesso 10.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleDown, faIdCard, faUsers, faBell, faHome, faHandshake } from '@fortawesome/free-solid-svg-icons'
 
@@ -21,6 +22,7 @@ export default function Home(){
             {/*Inicio NavBar*/}
             <div className="container">
               <Link className='link' to={'/'}><a className="navbar-brand" href="index.html">AcessoEscola</a></Link>
+              <img src={Logo} className="logo-9"  alt='Gráficos com nome acesso escola'/>
               <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
               </button>

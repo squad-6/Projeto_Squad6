@@ -1,4 +1,5 @@
 import './parceiros.css'
+import Logo from '../../components/images/Acesso 10.png'
 import { Link } from 'react-router-dom'
 import Livros2 from '../../components/images/livros2.jpg'
 import Hightech from '../../components/images/hightech.jpg'
@@ -24,6 +25,7 @@ export default function Parceiros(){
             {/*Inicio NavBar*/}
             <div className="container">
               <Link className='link' to={'/'}><a className="navbar-brand" href="index.html">AcessoEscola</a></Link>
+              <img src={Logo} className="logo-9"  alt='Gráficos com nome acesso escola'/>
               <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
               </button>

@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+.logo-9 {
+    width: 5%;
+    position: relative;
+    right: 25%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 24px 1px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 10px 10px 24px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 10px 10px 24px 1px rgba(0,0,0,0.29);
+  }
+  
 .navbar {
     background-color: #053894;
 }

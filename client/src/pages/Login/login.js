@@ -1,5 +1,6 @@
 import './login.css'
 import { Link } from 'react-router-dom'
+import Logo from '../../components/images/Acesso 10.png'
 import Menina from '../../components/images/raising-hand-animate.png'
 import { Formik, Form, Field, ErrorMessage} from 'formik'
 import * as yup from 'yup'
@@ -18,7 +19,7 @@ export default function Login(){
   const validationLogin = yup.object().shape({
     email: yup.string().email("Não é um email").required("Este campo é obrigatório."),
     password: yup.string().min(8, "A senha deve ter no mínimo 8 caracteres").required("Este campo é obrigatório."),
-  })
+  });
     return (
         <div className='tela-login'>
           <meta charSet="UTF-8" />
@@ -33,6 +34,7 @@ export default function Login(){
             {/*Inicio NavBar*/}
             <div className="container">
               <Link className='link' to={'/'}><a className="navbar-brand" href="index.html">AcessoEscola</a></Link>
+              <img src={Logo} className="logo-9"  alt='Gráficos com nome acesso escola'/>
               <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
               </button>
