@@ -7,7 +7,7 @@ import  Axios from 'axios'
 
 export default function Cadastroescola(){
   const handleClickRegister = (values) => {
-    Axios.post("https://localhost:3001/cadastro-escola", {
+    Axios.post("http://localhost:3001/cadastro-parceiros", {
       email: values.email,
       password: values.password
     }).then((response) => {
@@ -85,7 +85,7 @@ export default function Cadastroescola(){
                       <ErrorMessage component="span" name="cidade" className="form-error"/>
                     </div>
                     <div className="input-box">
-                      <label htmlFor="email">E-mail </label>
+                      <label>E-mail </label>
                       <Field name="email" type="email" className="form-field" placeholder="Digite seu E-mail" required></Field>
                       <ErrorMessage component="span" name="email" className="form-error"/>
                     </div>
@@ -100,7 +100,7 @@ export default function Cadastroescola(){
                       <ErrorMessage component="span" name="confirmPassword" className="form-error"/>
                     </div>
                     <div className="input-box">
-                      <label htmlFor="email">Ponto de atividade </label>
+                      <label>Ponto de atividade </label>
                       <Field name="atividade" type="text" className="form-field" placeholder="Digite sua atividade" required></Field>
                       <ErrorMessage component="span" name="atividade" className="form-error"/>
                     </div>

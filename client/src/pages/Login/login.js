@@ -1,12 +1,19 @@
 import './login.css'
 import { Link } from 'react-router-dom'
-import Menina from '../../components/images/raising-hand-animate_1.png'
+import Menina from '../../components/images/raising-hand-animate.png'
 import { Formik, Form, Field, ErrorMessage} from 'formik'
 import * as yup from 'yup'
 import Axios from 'axios'
 
 export default function Login(){
-  const handleClickLogin = (values) => console.log(values);
+  const handleClickLogin = (values) => {
+    Axios.post("http://localhost:3001/login", {
+      email: values.email,
+      password: values.password,
+    }).then((response) => {
+      console.log(response);
+    });
+  };
 
   const validationLogin = yup.object().shape({
     email: yup.string().email("Não é um email").required("Este campo é obrigatório."),
