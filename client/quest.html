@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="180x180" href=".\images\favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href=".\images\favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href=".\images\favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href=".\images\favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href=".\images\favicon/favicon-16x16.png">
+  <link rel="manifest" href=".\images\favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content=".\images\favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Questionário</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="css/styleQuest.css">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Questionário de entendimento do Acesso Escola</h1>
+      <p id="description" class="description text-center">
+        Alguma frase não sei
+      </p>
+    </header>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Nome da Escola</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Preencha com o nome da Escola"
+          required />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Preencha com o nome da Escola"
+          required />
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">Nome da Escola<span class="clue">(opicional)</span></label>
+        <input type="number" name="age" id="number" min="10" max="99" class="form-control"
+          placeholder="Preencha com o nome da Escola" />
+      </div>
+      <div class="form-group">
+        <p>Nome da Escola</p>
+        <select id="dropdown" name="role" class="form-control" required>
+          <option disabled selected value>Selecione a opção</option>
+          <option value="Estudante">Estudante</option>
+          <option value="Professor">Professor</option>
+          <option value="Diretor">Diretor</option>
+          <option value="Secretaria">Secretaria</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>Como ficou sabendo do site?</p>
+        <label>
+          <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />Recode</label>
+        <label>
+          <input name="user-recommend" value="maybe" type="radio" class="input-radio" />Noticia</label>
+
+        <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />Conversa</label>
+      </div>
+
+      <div class="form-group">
+        <p>
+          Nome da Escola
+        </p>
+        <select id="most-like" name="mostLike" class="form-control" required>
+          <option disabled selected value>Selecione uma opção</option>
+          <option value="challenges">Recode</option>
+          <option value="projects">Noticia</option>
+          <option value="community">Conversa</option>
+          <option value="openSource">Outro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>
+          Nome da Escola
+          <span class="clue">(Selecione uma ou mais opções)</span>
+        </p>
+
+        <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />Opção 1</label>
+        <label>
+          <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Opção 1</label>
+        <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Opção 1</label>
+        <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Opção 1</label>
+        <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox" />Opção
+          1</label>
+        <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox" />Opção 1</label>
+        <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" />Opção 1</label>
+        <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />Opção 1</label>
+        <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />Opção 1</label>
+        <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox" />Opção 1</label>
+        <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox" />Opção 1</label>
+      </div>
+
+      <div class="form-group">
+        <p>Alguma sugestão?</p>
+        <textarea id="comments" class="input-textarea" name="comment"
+          placeholder="Comente aqui sua sugestão..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Enviar
+        </button>
+      </div>
+    </form>
+  </div>
+  <script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+  <script id="rendered-js">
+    // coded by @lasjorg
+    // eslint-disable-next-line no-unused-vars
+    const projectName = 'survey-form';
+//# sourceURL=pen.js
+  </script>
+
+</body>
+
+</html>
