@@ -5,6 +5,10 @@ import Livros2 from '../../components/images/livros2.jpg'
 import Hightech from '../../components/images/hightech.jpg'
 import Papel from '../../components/images/papel.jpg'
 import Psico from '../../components/images/psico.jpg'
+import Eletronico from  '../../components/images/celu.jpg'
+import Maoobra from '../../components/images/construcao.jpg'
+import Material from '../../components/images/constru.png'
+import Palestra from '../../components/images/palestra.jpg'
 
 
 export default function Parceiros(){
@@ -68,7 +72,7 @@ export default function Parceiros(){
                 <div className="card-body">
                   <h5 className="card-title">Rica Leitura</h5>
                   <p className="card-text">A Rica Leitura colaborou com livros de literatura brasileira.</p>
-                  <a href="#" className="btn btn-primary"> Rica Leitura</a>
+                  
                 </div>
               </div>
               <div className="card" style={{width: '10rem'}}>
@@ -77,7 +81,7 @@ export default function Parceiros(){
                   <h5 className="card-title">Hightech</h5>
                   <p className="card-text">A Hightech colaborarou com materiais tecnologicos
                     fornecendo equipamentos.</p>
-                  <a href="#" className="btn        btn-primary">Hightech</a>
+                  
                 </div>
               </div>
               <div className="card" style={{width: '10rem'}}>
@@ -86,7 +90,7 @@ export default function Parceiros(){
                   <h5 className="card-title">Cel-lose</h5>
                   <p className="card-text"> A Cel-lose colaborou realizando a reposição de materiais para reabastecer
                     materiais basicos</p>
-                  <a href="#" className="btn btn-primary">Cel-lose</a>
+                  
                 </div>
               </div>
               <div className="card" style={{width: '10rem'}}>
@@ -95,43 +99,38 @@ export default function Parceiros(){
                   <h5 className="card-title">Psico</h5>
                   <p className="card-text">A Psico ajudou os alunos a adquirir intelicgencia emocioanal e perspectiva
                     de vida.</p>
-                  <a href="#" className="btn btn-primary">Psico</a>
+                  
                 </div>
               </div>
               <div className="card" style={{width: '10rem'}}>
-                <img src={Papel} className="card-img-top" alt="parceiros unindo pecas" />
+                <img src={Maoobra} className="card-img-top" alt="parceiros unindo pecas" />
                 <div className="card-body">
-                  <h5 className="card-title">Cel-lose</h5>
-                  <p className="card-text"> A Cel-lose colaborou realizando a reposição de materiais para reabastecer
-                    materiais basicos</p>
-                  <a href="#" className="btn btn-primary">Cel-lose</a>
+                  <h5 className="card-title">Armazem ltda</h5>
+                  <p className="card-text"> O Armazem ltda contribuiu com materiais de construção.</p>
+                  
                 </div>
               </div>
               <div className="card" style={{width: '10rem'}}>
-                <img src={Papel} className="card-img-top" alt="parceiros unindo pecas" />
+                <img src={Material} className="card-img-top" alt="parceiros unindo pecas" />
                 <div className="card-body">
-                  <h5 className="card-title">Cel-lose</h5>
-                  <p className="card-text"> A Cel-lose colaborou realizando a reposição de materiais para reabastecer
-                    materiais basicos</p>
-                  <a href="#" className="btn btn-primary">Cel-lose</a>
+                  <h5 className="card-title">Construções Rildo</h5>
+                  <p className="card-text">Construções Rildo contribuiu com mão de obra volutária.</p>
+                  
                 </div>
               </div>
               <div className="card" style={{width: '10rem'}}>
-                <img src={Psico} className="card-img-top" alt="parceiros unindo pecas" />
+                <img src={Palestra} className="card-img-top" alt="parceiros unindo pecas" />
                 <div className="card-body">
-                  <h5 className="card-title">Psico</h5>
-                  <p className="card-text">A Psico ajudou os alunos a adquirir intelicgencia emocioanal e perspectiva
-                    de vida.</p>
-                  <a href="#" className="btn btn-primary">Psico</a>
+                  <h5 className="card-title">Patent Io Palestas</h5>
+                  <p className="card-text">A Patent Io doou seu tempo fornecendo palestras sobre Saúde e Bem estar.</p>
+                  
                 </div>
               </div>
               <div className="card" style={{width: '10rem'}}>
-                <img src={Psico} className="card-img-top" alt="parceiros unindo pecas" />
+                <img src={Eletronico} className="card-img-top" alt="parceiros unindo pecas" />
                 <div className="card-body">
-                  <h5 className="card-title">Psico</h5>
-                  <p className="card-text">A Psico ajudou os alunos a adquirir intelicgencia emocioanal e perspectiva
-                    de vida.</p>
-                  <a href="#" className="btn btn-primary">Psico</a>
+                  <h5 className="card-title">Eletronicos SA</h5>
+                  <p className="card-text">A Eletronicos SA fizeram doações de smartphones.</p>
                 </div>
               </div>
             </div>

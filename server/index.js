@@ -7,13 +7,13 @@ const db = mysql.createPool({
     host: "localhost",
     user: "root",
     password: "3636riam",
-    database: "squad06",
+    database: "acessoescola",
 });
 
 app.use(express.json());
 app.use(cors());
 
-app.post("/cadastro-escola", (req, res) => {
+/*app.post("/cadastro-escola", (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
@@ -32,9 +32,9 @@ app.post("/cadastro-escola", (req, res) => {
             res.send({msg: "Email já cadastrado."})
         }
     });
-});
+});*/
 
-app.post("/cadastro-parceiros", (req, res) => {
+/*app.post("/cadastro-parceiros", (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
@@ -53,7 +53,7 @@ app.post("/cadastro-parceiros", (req, res) => {
             res.send({msg: "Email já cadastrado."})
         }
     });
-});
+});*/
 
 app.post("/login", (req, res) => {
     const email = req.body.email;
@@ -72,7 +72,6 @@ app.post("/login", (req, res) => {
     })
 });
     
-
 
 app.listen(3001, () => {
     console.log("Rodando na porta 3001")

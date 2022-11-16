@@ -12,22 +12,14 @@ export default function Cadastroescola(){
     Axios.post("http://localhost:8080/escola", {
 
       cep_escola: values.cep_escola,
-
       cidade_escola: values.cidade_escola,
-
       email_escola: values.email_escola,
-
       estado_escola: values.estado_escola,
-
       nome_escola: values.nome_escola,
-
       numero_escola: values.numero_escola,
-      
       telefone_escola: values.telefone_escola,
-
       senha_escola: values.senha_escola,
    
-
     }).then((response) => {
 
       console.log(response);

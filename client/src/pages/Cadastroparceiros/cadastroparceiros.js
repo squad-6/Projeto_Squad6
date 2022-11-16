@@ -8,29 +8,25 @@ import  Axios from 'axios'
 
 export default function Cadastroescola(){
   const handleClickRegister = (values) => {
-    Axios.post("http://localhost:3001/cadastro-parceiros", {
-      email: values.email,
-      password: values.password
-      /*
-      cidade_parceiro
-      email_parceiro
-      estado_parceiro
-      item_parceiro
-      nome_parceiro
-      ramo_atividade_parceiro
-      senha_parceiro 
-       */
-
-
+    Axios.post("http://localhost:8080/parceiro", {
+  
+      cidade_parceiro: values.cidade_parceiro,
+      email_parceiro: values.email_parceiro,
+      estado_parceiro: values.estado_parceiro,
+      item_parceiro: values.item_parceiro,
+      nome_parceiro: values.nome_parceiro,
+      ramo_atividade_parceiro: values.ramo_atividade_parceiro,
+      senha_parceiro: values.senha_parceiro ,
+       
     }).then((response) => {
       console.log(response);
     });
   };
 
   const validationRegister = yup.object().shape({
-    email: yup.string().email("Não é um email").required("Este campo é obrigatório."),
-    password: yup.string().min(8, "A senha deve ter no mínimo 8 caracteres").required("Este campo é obrigatório."),
-    confirmPassword: yup.string().oneOf([yup.ref("password"), null], "As senhas devem ser iguais.")
+    email_parceiro: yup.string().email("Não é um email").required("Este campo é obrigatório."),
+    senha_parceiro: yup.string().min(8, "A senha deve ter no mínimo 8 caracteres").required("Este campo é obrigatório."),
+    confirmPassword: yup.string().oneOf([yup.ref("senha_parceiro"), null], "As senhas devem ser iguais.")
   })
 
     return (
@@ -89,23 +85,23 @@ export default function Cadastroescola(){
                     </div>
                     <div className="input-box">
                       <label htmlFor="lastname">Estado</label>
-                      <Field name="estado" type="text" className="form-field" placeholder="Digite seu estado" required></Field>
-                      <ErrorMessage component="span" name="estado" className="form-error"/>
+                      <Field name="estado_parceiro" type="text" className="form-field" placeholder="Digite seu estado" required></Field>
+                      <ErrorMessage component="span" name="estado_parceiro" className="form-error"/>
                     </div>
                     <div className="input-box">
                       <label htmlFor="lastname">Cidade </label>
-                      <Field name="cidade" type="text" className="form-field" placeholder="Digite sua cidade" required></Field>
-                      <ErrorMessage component="span" name="cidade" className="form-error"/>
+                      <Field name="cidade_parceiro" type="text" className="form-field" placeholder="Digite sua cidade" required></Field>
+                      <ErrorMessage component="span" name="cidade_parceiro" className="form-error"/>
                     </div>
                     <div className="input-box">
                       <label>E-mail </label>
-                      <Field name="email" type="email" className="form-field" placeholder="Digite seu E-mail" required></Field>
-                      <ErrorMessage component="span" name="email" className="form-error"/>
+                      <Field name="email_parceiro" type="email" className="form-field" placeholder="Digite seu E-mail" required></Field>
+                      <ErrorMessage component="span" name="email_parceiro" className="form-error"/>
                     </div>
                     <div className="input-box">
                       <label>Senha</label>
-                      <Field name="password" type="password" className="form-field" placeholder="Digite uma senha" required></Field>
-                      <ErrorMessage component="span" name="password" className="form-error"/>
+                      <Field name="senha_parceiro" type="password" className="form-field" placeholder="Digite uma senha" required></Field>
+                      <ErrorMessage component="span" name="senha_parceiro" className="form-error"/>
                     </div>
                     <div className="input-box">
                       <label>Confirme sua senha</label>
@@ -114,16 +110,16 @@ export default function Cadastroescola(){
                     </div>
                     <div className="input-box">
                       <label>Ponto de atividade </label>
-                      <Field name="atividade" type="text" className="form-field" placeholder="Digite sua atividade" required></Field>
-                      <ErrorMessage component="span" name="atividade" className="form-error"/>
+                      <Field name="ramo_atividade_parceiro" type="text" className="form-field" placeholder="Digite sua atividade" required></Field>
+                      <ErrorMessage component="span" name="ramo_atividade_parceiro" className="form-error"/>
                     </div>
                     <fieldset>
                       <div className="colaboracao">
                         <label> Tipo de colaboração</label><br /><br />
-                        <Field name="doacao" type="checkbox" className="form-field"></Field>
-                        <label htmlFor="colaboracao1">Doação </label>
-                        <Field name="voluntario" type="checkbox" className="form-field"></Field>
-                        <label htmlFor="colaboracao2">Voluntariado</label>
+                        <Field name="item_parceiro" type="checkbox" className="form-field"></Field>
+                        <label name="item_parceiro">Doação </label>
+                        <Field name="item_parceiro" type="checkbox" className="form-field"></Field>
+                        <label name="item_parceiro">Voluntariado</label>
                       </div>
                     </fieldset>
                     <div className="gender-inputs">
