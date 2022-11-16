@@ -11,6 +11,17 @@ export default function Cadastroescola(){
     Axios.post("http://localhost:3001/cadastro-parceiros", {
       email: values.email,
       password: values.password
+      /*
+      cidade_parceiro
+      email_parceiro
+      estado_parceiro
+      item_parceiro
+      nome_parceiro
+      ramo_atividade_parceiro
+      senha_parceiro 
+       */
+
+
     }).then((response) => {
       console.log(response);
     });

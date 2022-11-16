@@ -22,7 +22,7 @@
 .main-login {
     width: 100vw;
     height: 100vh;
-    background: url(../../../images/bg2.png);
+    background: url(../../components/images/bg2.png);
     display: flex;
     justify-content: center;
     align-items: center;

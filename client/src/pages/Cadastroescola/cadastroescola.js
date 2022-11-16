@@ -7,25 +7,119 @@ import * as yup from 'yup'
 import  Axios from 'axios'
 
 export default function Cadastroescola(){
-  const handleClickRegister = (values) => {
-    Axios.post("http://localhost:3001/cadastro-escola", {
-      email_escola: values.senha_escola,
-      senha_escola: values.senha_escola,
-      nome_escola: values.nome_escola,
-      estado_escola: values.estado_escola,
-      cidade_escola: values.cidade_escola,
-      telefone_escola: values.telefone_escola,
-      cep_escola: values.cep_escola,
-      numero_escola: values.numero_escola,
-    }).then((response) => {
-      console.log(response);
-    });
-  };
+ const handleClickRegister = (values) => {
 
+    Axios.post("http://localhost:8080/escola", {
+
+      cep_escola: values.cep_escola,
+
+      cidade_escola: values.cidade_escola,
+
+      email_escola: values.email_escola,
+
+      estado_escola: values.estado_escola,
+
+      nome_escola: values.nome_escola,
+
+      numero_escola: values.numero_escola,
+      
+      telefone_escola: values.telefone_escola,
+
+      senha_escola: values.senha_escola,
+   
+
+    }).then((response) => {
+
+      console.log(response);
+
+    });
+
+   /* Axios.get("http://localhost:8080/escola", {
+
+      cep_escola: values.cep_escola,
+
+      cidade_escola: values.cidade_escola,
+
+      email_escola: values.email_escola,
+
+      estado_escola: values.estado_escola,
+
+      nome_escola: values.nome_escola,
+
+      numero_escola: values.numero_escola,
+      
+      telefone_escola: values.telefone_escola,
+
+      senha_escola: values.senha_escola,
+   
+
+    }).then((response) => {
+
+      console.log(response);
+
+    });
+
+    Axios.put("http://localhost:8080/escola", {
+
+      cep_escola: values.cep_escola,
+
+      cidade_escola: values.cidade_escola,
+
+      email_escola: values.email_escola,
+
+      estado_escola: values.estado_escola,
+
+      nome_escola: values.nome_escola,
+
+      numero_escola: values.numero_escola,
+      
+      telefone_escola: values.telefone_escola,
+
+      senha_escola: values.senha_escola,
+   
+
+    }).then((response) => {
+
+      console.log(response);
+
+    });
+  
+   
+    Axios.delete("http://localhost:8080/escola", {
+
+      cep_escola: values.cep_escola,
+
+      cidade_escola: values.cidade_escola,
+
+      email_escola: values.email_escola,
+
+      estado_escola: values.estado_escola,
+
+      nome_escola: values.nome_escola,
+
+      numero_escola: values.numero_escola,
+      
+      telefone_escola: values.telefone_escola,
+
+      senha_escola: values.senha_escola,
+   
+
+    }).then((response) => {
+
+      console.log(response);
+
+    });*/
+
+  };
+  
   const validationRegister = yup.object().shape({
+
     email_escola: yup.string().email("Não é um email").required("Este campo é obrigatório."),
+
     senha_escola: yup.string().min(8, "A senha deve ter no mínimo 8 caracteres").required("Este campo é obrigatório."),
-    confirmPassword: yup.string().oneOf([yup.ref("password"), null], "As senhas devem ser iguais.")
+
+    confirmPassword: yup.string().oneOf([yup.ref("senha_escola"), null], "As senhas devem ser iguais.")
+
   });
 
   function myFunction(){
@@ -87,6 +181,15 @@ export default function Cadastroescola(){
                     <ErrorMessage component="span" name="nome_escola" className="form-error"/>
                   </div>
                   <div className="input-box">
+
+                    <label>Numero escola</label>
+
+                    <Field name="numero_escola" type="text" className="form-field" placeholder="Nº" required maxLength={8}></Field>
+
+                    <ErrorMessage component="span" name="numero_escola" className="form-error"/>
+
+                  </div>
+                  <div className="input-box">
                     <label htmlFor="lastname">Estado</label>
                     <Field name="estado_escola" type="text" className="form-field" placeholder="Digite seu Estado" required></Field>
                     <ErrorMessage component="span" name="estado" className="form-error"/>
@@ -118,14 +221,10 @@ export default function Cadastroescola(){
                   </div>
                   <div className="input-box">
                     <label htmlFor="Confirmpassword">CEP</label>
-                    <Field name="cep" type="text" className="form-field" placeholder="00000-000" required maxLength={8}></Field>
-                    <ErrorMessage component="span" name="cep" className="form-error"/>
+                    <Field name="cep_escola" type="text" className="form-field" placeholder="00000-000" required maxLength={8}></Field>
+                    <ErrorMessage component="span" name="cep_escola" className="form-error"/>
                   </div>
-                  <div className="input-box">
-                    <label>Endereço</label>
-                    <Field name="endereco_escola" type="text" className="form-field" placeholder="Ex.: Rua Yeld" required></Field>
-                    <ErrorMessage component="span" name="endereco" className="form-error"/>
-                  </div>
+                  
                   <div className="gender-inputs">
                   <div className="continue-button">
                     <button className='button' type="submit" onclick="myFunction()"><a>Registrar</a></button>

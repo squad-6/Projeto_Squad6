@@ -108,7 +108,7 @@
 
 footer {
     padding: 14px 0;
-    background: url(../../../images/abst.jpg);
+    background: url(../../components/images/abst.jpg);
     background-size: 100%;
     color: rgb(255, 255, 255);
 }
@@ -141,7 +141,7 @@ section.chamadaa {
     background: #F2B705;
     padding: 8px 0;
     color: white;
-    background-image: url(../../../images/bg2.png);
+    background-image: url(../../components/images/bg2.png);
 }
 
 .card-img-top-maior {
