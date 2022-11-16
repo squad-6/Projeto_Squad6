@@ -9,16 +9,22 @@ import  Axios from 'axios'
 export default function Cadastroescola(){
   const handleClickRegister = (values) => {
     Axios.post("http://localhost:3001/cadastro-escola", {
-      email: values.email,
-      password: values.password
+      email_escola: values.senha_escola,
+      senha_escola: values.senha_escola,
+      nome_escola: values.nome_escola,
+      estado_escola: values.estado_escola,
+      cidade_escola: values.cidade_escola,
+      telefone_escola: values.telefone_escola,
+      cep_escola: values.cep_escola,
+      numero_escola: values.numero_escola,
     }).then((response) => {
       console.log(response);
     });
   };
 
   const validationRegister = yup.object().shape({
-    email: yup.string().email("Não é um email").required("Este campo é obrigatório."),
-    password: yup.string().min(8, "A senha deve ter no mínimo 8 caracteres").required("Este campo é obrigatório."),
+    email_escola: yup.string().email("Não é um email").required("Este campo é obrigatório."),
+    senha_escola: yup.string().min(8, "A senha deve ter no mínimo 8 caracteres").required("Este campo é obrigatório."),
     confirmPassword: yup.string().oneOf([yup.ref("password"), null], "As senhas devem ser iguais.")
   });
 
@@ -82,22 +88,22 @@ export default function Cadastroescola(){
                   </div>
                   <div className="input-box">
                     <label htmlFor="lastname">Estado</label>
-                    <Field name="estado" type="text" className="form-field" placeholder="Digite seu Estado" required></Field>
+                    <Field name="estado_escola" type="text" className="form-field" placeholder="Digite seu Estado" required></Field>
                     <ErrorMessage component="span" name="estado" className="form-error"/>
                   </div>
                   <div className="input-box">
                     <label htmlFor="lastname">Cidade </label>
-                    <Field name="cidade" type="text" className="form-field" placeholder="Digite sua cidade" required></Field>
+                    <Field name="cidade_escola" type="text" className="form-field" placeholder="Digite sua cidade" required></Field>
                     <ErrorMessage component="span" name="cidade" className="form-error"/>
                   </div>
                   <div className="input-box">
                     <label>E-mail institucional </label>
-                    <Field name="email" type="email" className="form-field" placeholder="Digite seu E-mail" required></Field>
+                    <Field name="email_escola" type="email" className="form-field" placeholder="Digite seu E-mail" required></Field>
                     <ErrorMessage component="span" name="email" className="form-error"/>
                   </div>
                   <div className="input-box">
                     <label>Senha</label>
-                    <Field name="password" type="password" className="form-field" placeholder="Digite uma senha" required></Field>
+                    <Field name="senha_escola" type="password" className="form-field" placeholder="Digite uma senha" required></Field>
                     <ErrorMessage component="span" name="password" className="form-error"/>
                   </div>
                   <div className="input-box">
@@ -107,7 +113,7 @@ export default function Cadastroescola(){
                   </div>
                   <div className="input-box">
                     <label htmlFor="password">Telefone</label>
-                    <Field name="telefone" type="text" className="form-field" placeholder="(00) 00000-0000" maxLength={11} required></Field>
+                    <Field name="telefone_escola" type="text" className="form-field" placeholder="(00) 00000-0000" maxLength={11} required></Field>
                     <ErrorMessage component="span" name="telefone" className="form-error"/>
                   </div>
                   <div className="input-box">
@@ -117,7 +123,7 @@ export default function Cadastroescola(){
                   </div>
                   <div className="input-box">
                     <label>Endereço</label>
-                    <Field name="endereco" type="text" className="form-field" placeholder="Ex.: Rua Yeld" required></Field>
+                    <Field name="endereco_escola" type="text" className="form-field" placeholder="Ex.: Rua Yeld" required></Field>
                     <ErrorMessage component="span" name="endereco" className="form-error"/>
                   </div>
                   <div className="gender-inputs">
