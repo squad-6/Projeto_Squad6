@@ -1,8 +1,22 @@
 import './doacao.css'
+import React, {useState, useEffect} from 'react';
 import Logo from '../../components/images/Acesso 10.png'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 
 export default function Doacao(){
+
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    axios.get("http://localholst:8080/escola").then((response) => {
+      setPosts(response.data);
+    }).catch(() => {
+      console.log("Deu errado.");
+    })
+  }, [])
+
+
     return (
         <div className='tela-doacao'>
           <meta charSet="UTF-8" />
@@ -46,6 +60,7 @@ export default function Doacao(){
           </header>
           <main className='main-doacao'>
             <h1 className='titulo-doacao'>Doação ☜</h1>
+            {/*Fim NavBar
             <form className="row g-3 needs-validation" noValidate id="box-doacao">
               <div className="col-md-6">
                 <label htmlFor="validationCustom03" className="form-label">Cidade</label>
@@ -104,10 +119,12 @@ export default function Doacao(){
                 <button className="btn btn-primary" type="submit">Filtrar</button>
               </div>
             </form>
+            */}
             <section className='section-doacao'>
               <div>
                 <h3 className="tituloBusca">Resultado da Busca</h3>
               </div>
+              <div className='toldo'>
               <div className="table">
                 <table className=" table table table-striped box-shadow " id="tabela-doacao">
                   <thead>
@@ -121,45 +138,28 @@ export default function Doacao(){
                       <th scope="col"> </th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>EE.Ottomelheires</td>
-                      <td>@ottomelheires.com</td>
-                      <td>114444-3333</td>
-                      <td>Porto Alegre</td>
-                      <td>RS</td>
+                  {posts.map((post, key) => {
+                  return(
+                    <tbody key={key}>
+                      <tr>
+                      <th scope="row">{post.id_escola}</th>
+                      <td>{post.nome_escola}</td>
+                      <td>{post.email_escola}</td>
+                      <td>{post.telefone_escola}</td>
+                      <td>{post.cidade_escola}</td>
+                      <td>{post.estado_escola}</td>
                       <td><button type="button" className="btn btn-primary">Selecionar</button> </td>
                     </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>EE.Ottomelheires</td>
-                      <td>@ottomelheires.com</td>
-                      <td>114444-3333</td>
-                      <td>Porto Alegre</td>
-                      <td>RS</td>
-                      <td><button type="button" className="btn btn-primary">Selecionar</button> </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>EE.Ottomelheires</td>
-                      <td>@ottomelheires.com</td>
-                      <td>114444-3333</td>
-                      <td>Porto Alegre</td>
-                      <td>RS</td>
-                      <td><button type="button" className="btn btn-primary">Selecionar</button> </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>EE.Ottomelheires</td>
-                      <td>@ottomelheires.com</td>
-                      <td>114444-3333</td>
-                      <td>Porto Alegre</td>
-                      <td>RS</td>
-                      <td><button type="button" className="btn btn-primary">Selecionar</button> </td>
-                    </tr>
-                  </tbody>
+                      <div className='box-resultado'>
+                        <h2>{post.nome_escola}</h2>
+                      </div>
+                    </tbody>
+                  )
+                  
+                })}
+                  
                 </table>
+              </div>
               </div>
             </section>
           </main>

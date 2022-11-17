@@ -12,7 +12,7 @@ import Axios from 'axios'
 export default function Home(){
 
   const handleClickMensagem = (values) => {
-    Axios.post("http://localhost:3001/mensagem", {
+    Axios.post("http://localhost:8080/faleconosco", {
       nome: values.nome,
       email: values.email,
       mensagem: values.mensagem,

@@ -7,7 +7,15 @@
     min-height: 100vh;
     min-height: 100vh;
 }
+.box-resultado{
+    height: 300px;
+    color:#fff;
+}
 
+.toldo{
+    height: 50px;
+    background-color: #053894;
+}
 
 .navbar {
     background-color: #053894;
