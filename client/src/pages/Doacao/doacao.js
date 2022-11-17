@@ -1,27 +1,43 @@
 import './doacao.css'
+import React, { useState, useEffect } from 'react';
 import Logo from '../../components/images/Acesso 10.png'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+import { MemoryRouter } from 'react-router-dom';
 
-export default function Doacao(){
-    return (
-        <div className='tela-doacao'>
-          <meta charSet="UTF-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          {/* fonte*/}
-          <link rel="stylesheet" href="./fontawesome/font-awesome.min.css" />
-          <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ibarra+Real+Nova&display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap" rel="stylesheet" />
-          {/* final fonte*/}
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossOrigin="anonymous" />
-          <link rel="stylesheet" href="./css/styleDoacao.css" />
-          <title>Doação</title>
-          <header>
+export default function Doacao() {
+
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    axios.get("http://localholst:8080/escola").then((response) => {
+      setPosts(response.data);
+    }).catch(() => {
+      console.log("Deu errado.");
+    })
+  }, [])
+
+
+  return (
+    <MemoryRouter>
+      <div className='tela-doacao'>
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* fonte*/}
+        <link rel="stylesheet" href="./fontawesome/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ibarra+Real+Nova&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap" rel="stylesheet" />
+        {/* final fonte*/}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="./css/styleDoacao.css" />
+        <title>Doação</title>
+        <header>
           <nav className="navbar navbar-expand-md navbar-dark fixed-top">
             {/*Inicio NavBar*/}
             <div className="container">
               <Link className='link' to={'/'}><a className="navbar-brand" href="index.html">AcessoEscola</a></Link>
-              <img src={Logo} className="logo-9"  alt='Gráficos com nome acesso escola'/>
+              <img src={Logo} className="logo-9" alt='Gráficos com nome acesso escola' />
               <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
               </button>
@@ -34,18 +50,19 @@ export default function Doacao(){
                     <Link className='link' to={'/parceiros'}><a className="nav-link" href="parceiros.html">Parceiros</a></Link>
                   </li>
                   <li className="nav-item">
-                  <Link className='link' to={'/quem-somos'}><a className="nav-link" href="quemSomos.html">Quem Somos</a></Link>
+                    <Link className='link' to={'/quem-somos'}><a className="nav-link" href="quemSomos.html">Quem Somos</a></Link>
                   </li>
                   <li className="nav-item">
-                  <Link className='linkk' to={'/login'}><a className="nav-link" href="login.html">Entrar</a></Link>
+                    <Link className='linkk' to={'/login'}><a className="nav-link" href="login.html">Entrar</a></Link>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-          </header>
-          <main className='main-doacao'>
-            <h1 className='titulo-doacao'>Doação ☜</h1>
+        </header>
+        <main className='main-doacao'>
+          <h1 className='titulo-doacao'>Doação ☜</h1>
+          {/*Fim NavBar
             <form className="row g-3 needs-validation" noValidate id="box-doacao">
               <div className="col-md-6">
                 <label htmlFor="validationCustom03" className="form-label">Cidade</label>
@@ -104,10 +121,12 @@ export default function Doacao(){
                 <button className="btn btn-primary" type="submit">Filtrar</button>
               </div>
             </form>
-            <section className='section-doacao'>
-              <div>
-                <h3 className="tituloBusca">Resultado da Busca</h3>
-              </div>
+            */}
+          <section className='section-doacao'>
+            <div>
+              <h3 className="tituloBusca">Resultado da Busca</h3>
+            </div>
+            <div className='toldo'>
               <div className="table">
                 <table className=" table table table-striped box-shadow " id="tabela-doacao">
                   <thead>
@@ -121,49 +140,33 @@ export default function Doacao(){
                       <th scope="col"> </th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>EE.Ottomelheires</td>
-                      <td>@ottomelheires.com</td>
-                      <td>114444-3333</td>
-                      <td>Porto Alegre</td>
-                      <td>RS</td>
-                      <td><button type="button" className="btn btn-primary">Selecionar</button> </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>EE.Ottomelheires</td>
-                      <td>@ottomelheires.com</td>
-                      <td>114444-3333</td>
-                      <td>Porto Alegre</td>
-                      <td>RS</td>
-                      <td><button type="button" className="btn btn-primary">Selecionar</button> </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>EE.Ottomelheires</td>
-                      <td>@ottomelheires.com</td>
-                      <td>114444-3333</td>
-                      <td>Porto Alegre</td>
-                      <td>RS</td>
-                      <td><button type="button" className="btn btn-primary">Selecionar</button> </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>EE.Ottomelheires</td>
-                      <td>@ottomelheires.com</td>
-                      <td>114444-3333</td>
-                      <td>Porto Alegre</td>
-                      <td>RS</td>
-                      <td><button type="button" className="btn btn-primary">Selecionar</button> </td>
-                    </tr>
-                  </tbody>
+                  {posts.map((post, key) => {
+                    return (
+                      <tbody key={key}>
+                        <tr>
+                          <th scope="row">{post.id_escola}</th>
+                          <td>{post.nome_escola}</td>
+                          <td>{post.email_escola}</td>
+                          <td>{post.telefone_escola}</td>
+                          <td>{post.cidade_escola}</td>
+                          <td>{post.estado_escola}</td>
+                          <td><button type="button" className="btn btn-primary">Selecionar</button> </td>
+                        </tr>
+                        <div className='box-resultado'>
+                          <h2>{post.nome_escola}</h2>
+                        </div>
+                      </tbody>
+                    )
+
+                  })}
+
                 </table>
               </div>
-            </section>
-          </main>
-          <footer />
-        </div>
-      );
+            </div>
+          </section>
+        </main>
+        <footer />
+      </div>
+    </MemoryRouter>
+  );
 }
