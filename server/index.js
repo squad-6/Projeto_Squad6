@@ -7,7 +7,7 @@ const cors = require('cors');
 const db = mysql.createPool({
     host: "localhost",
     user: "root",
-    password: "3636riam",
+    password: "root",
     database: "acessoescola",
 });
 
