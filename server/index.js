@@ -1,3 +1,4 @@
+import { useNavigate} from 'react-router-dom'
 const express = require("express");
 const app = express();
 const mysql = require('mysql2');
@@ -10,6 +11,7 @@ const db = mysql.createPool({
     database: "acessoescola",
 });
 
+const navigate = useNavigate();
 app.use(express.json());
 app.use(cors());
 
@@ -65,9 +67,11 @@ app.post("/login", (req, res) => {
         }
         if(result.length > 0){
             res.send({msg: "Logado com sucesso!"})
+            navigate("/questionario", { replace: true} );
         }
         else{
-            res.send({msg: "Email ou senha incorretos."})
+            res.send({msg: "Email ou senha incorretos."});
+            alert("Email ou senha incorretos.");
         }
     })
 });

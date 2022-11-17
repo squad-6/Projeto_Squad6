@@ -5,8 +5,10 @@ import School from '../../components/images/High-School-cuate.png'
 import { Formik, Form, Field, ErrorMessage} from 'formik'
 import * as yup from 'yup'
 import  Axios from 'axios'
+import { useNavigate} from 'react-router-dom'
 
 export default function Cadastroescola(){
+  const navigate = useNavigate();
  const handleClickRegister = (values) => {
 
     Axios.post("http://localhost:8080/escola", {
@@ -23,6 +25,7 @@ export default function Cadastroescola(){
     }).then((response) => {
 
       console.log(response);
+      navigate("/login", { replace: true} );
 
     });
 

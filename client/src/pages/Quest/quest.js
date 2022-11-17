@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import { Formik, Form, Field, ErrorMessage} from 'formik'
 import * as yup from 'yup'
 import Axios from 'axios'
+import { useNavigate} from 'react-router-dom'
 
 export default function Quest(){
+  const navigate = useNavigate();
+
   const handleClickQuest = (values) => {
     Axios.post("http://localhost:8080/questionario", {
       pergunta1: values.pergunta1,
@@ -13,6 +16,7 @@ export default function Quest(){
       pergunta4: values.pergunta4
     }).then((response) => {
       console.log(response);
+      navigate("/", { replace: true} );
     }); 
   };
 
